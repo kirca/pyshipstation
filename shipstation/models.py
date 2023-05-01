@@ -143,12 +143,12 @@ class ShipStationContainer(ShipStationBase):
 
     def as_dict(self):
         d = super(ShipStationContainer, self).as_dict()
-        return __setattr__(d, "weight", self.weight.as_dict()) if self.weight else d
+        # return __setattr__(d, "weight", self.weight.as_dict()) if self.weight else d
         #
-        # if self.weight:
-        #     d["weight"] = self.weight.as_dict()
-        #
-        # return d
+        if self.weight:
+            d["weight"] = self.weight.as_dict()
+        
+        return d
 
 
 class ShipStationItem(ShipStationBase):
@@ -180,12 +180,12 @@ class ShipStationItem(ShipStationBase):
     def as_dict(self):
         d = super(ShipStationItem, self).as_dict()
 
-        return __setattr__(d, "weight", self.weight.as_dict()) if self.weight else d
+        # return __setattr__(d, "weight", self.weight.as_dict()) if self.weight else d
 
-        # if self.weight:
-        #     d["weight"] = self.weight.as_dict()
-        #
-        # return d
+        if self.weight:
+            d["weight"] = self.weight.as_dict()
+        
+        return d
 
 
 class ShipStationAddress(ShipStationBase):
