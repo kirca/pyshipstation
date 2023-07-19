@@ -163,7 +163,7 @@ class ShipStationItem(ShipStationBase):
         warehouse_location=None,
         options=None,
     ):
-        self.key = key
+        self.line_item_key = key
         self.sku = sku
         self.name = name
         self.image_url = image_url
